@@ -1,8 +1,8 @@
-# SlwMenu/(Super Lightweight Menu)
+# SlwSpinner/(Super Lightweight Spinner)
 
-Javascript Menu
+Javascript Spinner Input
 
-[Demo](https://wang-weidong.github.io/SlwMenu/demo/index.html "Demo")
+[Demo](https://wang-weidong.github.io/SlwSpinner/demo/index.html "Demo")
 
 ## Browser Support ##
 - Internet Explorer: 9, 10, 11
@@ -19,4 +19,4 @@ Javascript Menu
 ## License ##
 Copyright (c) 2018 WangWeidong
 
-SlwMenu/slw.Menu.js is released under the MIT license.
+SlwSpinner/slw.spinner.js is released under the MIT license.
