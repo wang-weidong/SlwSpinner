@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>SlwSpinner demo</title>
+<script type="text/javascript" src="jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../slw.spinner.js"></script>
+<link rel="stylesheet" href="../style/font-awesome.min.css" />
+<link rel="stylesheet" href="../style/spinner.css" type="text/css" />
+</head>
+
+<body>
+	<h1>SlwSpinner Demo</h1>
+	<div style="margin: 20px">
+	
+			<table class="table table-bordered editTable form-group-sm">
+				<thead>
+					<tr>
+						<th colspan="12">表单</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="firstRow">
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+						<td colspan="1" class="col-md-1"></td>
+					</tr>
+
+					<tr>
+						<td class="tdLable" colspan="3">整数（样式一）</td>
+						<td colspan="9"><input class="form-control" id="spinner_10" value="0" /></td>
+					</tr>
+
+					<tr>
+						<td class="tdLable" colspan="3">整数（样式一）</td>
+						<td colspan="9"><input class="form-control" id="spinner_11" value="0" /></td>
+					</tr>
+					<tr>
+						<td class="tdLable" colspan="3">整数（样式一）</td>
+						<td colspan="9"><input class="form-control" id="spinner_12" value="0" /></td>
+					</tr>
+					<tr>
+						<td class="tdLable" colspan="3">整数（样式二，step:5）</td>
+						<td colspan="9"><input class="form-control" id="spinner_2" value="0" /></td>
+					</tr>
+					<tr>
+						<td class="tdLable" colspan="3">整数（只读，设置宽度）</td>
+						<td colspan="9"><input class="form-control" readonly id="spinner_3" value="0" /></td>
+					</tr>
+
+					<tr>
+						<td class="tdLable" colspan="3">整数（-10,10）</td>
+						<td colspan="9"><input class="form-control" id="spinner_4" value="0" /></td>
+					</tr>
+					<tr>
+						<td class="tdLable" colspan="3">浮点数</td>
+						<td colspan="9"><input class="form-control" id="spinner_5" value="0.01" /></td>
+					</tr>
+
+					<tr>
+						<td class="tdLable" colspan="3">说明</td>
+						<td colspan="9">
+		<pre class="brush:javascript;">
+		$('#el').slwSpinner({
+			style : 1, // 1: up, down; 2: minus, plus
+			style_1_align : 'right',  // style = 1时生效， 可设置为 right, left, both
+			min : null,
+			max : null,
+			step : 1,
+			precision : 0,
+			width : '100%'
+		});
+		</pre></td>
+					</tr>
+
+				</tbody>
+			</table>
+	</div>
+	
+	
+	<script>
+		$(function() {
+		$('#spinner_10').slwSpinner();
+		$('#spinner_11').slwSpinner({
+			style_1_align : 'both'
+		});
+		$('#spinner_12').slwSpinner({
+			style_1_align : 'left'
+		});
+		$('#spinner_2').slwSpinner({
+			style : 2,
+			step : 5
+		});
+		$('#spinner_3').slwSpinner({
+			width : '180px',
+			style_1_align : 'right'
+		});
+		$('#spinner_4').slwSpinner({
+			min : -10,
+			max : 10,
+			step : 2
+		});
+		$('#spinner_5').slwSpinner({
+			style : 2,
+			precision : 2,
+			step : 0.01
+		});
+			
+		});
+	</script>
+</body>
+</html>
